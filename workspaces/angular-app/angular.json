@@ -27,7 +27,11 @@
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/styles.scss"],
+						"styles": [
+							"@angular/material/prebuilt-themes/purple-green.css",
+							"src/contents/bootstrap/5.3.0/css/bootstrap.min.css",
+							"src/styles.scss"
+						],
 						"scripts": []
 					},
 					"configurations": {
@@ -91,7 +95,10 @@
 						"inlineStyleLanguage": "scss",
 						"include": ["**/*.spec.ts"],
 						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/styles.scss"],
+						"styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.scss"
+            ],
 						"scripts": []
 					}
 				},

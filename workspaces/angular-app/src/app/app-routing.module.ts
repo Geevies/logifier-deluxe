@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MultiplesComponent } from './components/multiples/multiples.component';
+import { LogifierComponent } from './components/logifier/logifier.component';
 
 const routes: Routes = [
 	{
 		path: '',
-		component: MultiplesComponent,
+		component: LogifierComponent,
 	},
 ];
 

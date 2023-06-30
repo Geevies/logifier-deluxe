@@ -1,11 +1,11 @@
 import AbstractPage from './page.ts';
 
-class MultiplesPage extends AbstractPage {
+class LogifierPage extends AbstractPage {
 	/**
 	 * Selectors using getter methods
 	 */
 	public get root() {
-		return $('#multiples');
+		return $('#logifier');
 	}
 
 	public get input() {
@@ -29,4 +29,4 @@ class MultiplesPage extends AbstractPage {
 	}
 }
 
-export default new MultiplesPage();
+export default new LogifierPage();

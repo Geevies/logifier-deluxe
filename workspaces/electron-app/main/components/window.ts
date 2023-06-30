@@ -2,7 +2,7 @@ import * as remoteMain from '@electron/remote/main';
 import { app, BrowserWindow, ipcMain, nativeImage } from 'electron';
 import * as path from 'node:path';
 import { AbstractService } from '../services/abstract-service';
-import { MultiplesService } from '../services/multiples-service';
+import { LogifierService } from '../services/logifier-service';
 import { Logger } from '../utils/logger';
 
 declare const global: Global;
@@ -14,7 +14,7 @@ export class Window {
 	constructor() {
 		this.createWindow();
 		this.loadRenderer();
-		this.registerService<number, number[]>(new MultiplesService());
+		this.registerService<number, number[]>(new LogifierService());
 	}
 
 	private createWindow(): void {

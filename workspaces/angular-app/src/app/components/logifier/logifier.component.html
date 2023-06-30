@@ -1,0 +1,40 @@
+<div class="container" style="margin: 0; max-width: 95vw; margin-left: auto; margin-right: auto;">
+	<div class="row" style="padding-top: 15px;">
+		<div class="col-md-12">
+			<mat-card style="height: 95vh; background-color: rgb(40, 40, 40);">
+				<mat-card-header style="margin-bottom: 15px;" class="title_center">
+					<mat-card-title>Logifier Deluxe{{ logId ? ' - ' + logId : '' }}</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<div class="row">
+						<div class="col-md-3">
+							<mat-card style="height: 80vh">
+								<mat-card-content>
+									<mat-form-field style="width: 100%">
+										<mat-label>Paste Log Here</mat-label>
+										<textarea rows="5" [(ngModel)]="data" (ngModelChange)="processLogLines($event)" style="width: 100%" matInput></textarea>
+									</mat-form-field>
+									<mat-form-field style="width: 100%">
+										<mat-label>Searching For</mat-label>
+										<textarea rows="8" [(ngModel)]="searchText" (ngModelChange)="processSearchLines($event)" style="width: 100%" matInput></textarea>
+									</mat-form-field>
+								</mat-card-content>
+							</mat-card>
+						</div>
+						<div class="col-md-9">
+							<mat-card style="height: 80vh">
+								<mat-card-content style="overflow-wrap: anywhere; overflow-y: scroll;">
+									<div *ngFor="let logLine of logLines" style="margin-bottom: 10px;">
+										<span style="font-size: small;" [style.color]="logLine.color">{{ logLine.index }} - {{ logLine.timestamp }} - {{ logLine.type }}</span><br>
+										<span style="font-size: larger;" [style.color]="logLine.color">{{ logLine.text }}</span>
+										<mat-divider style="margin-top: 5px;"></mat-divider>
+									</div>
+								</mat-card-content>
+							</mat-card>
+						</div>
+					</div>
+				</mat-card-content>
+			</mat-card>
+		</div>
+	</div>
+</div>

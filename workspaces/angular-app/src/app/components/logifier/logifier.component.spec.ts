@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { MultiplesComponent } from './multiples.component';
+import { LogifierComponent } from './logifier.component';
 import { ElectronIpcService } from 'src/app/services/electron-ipc.service';
 import {
 	TranslateFakeLoader,
@@ -10,14 +10,14 @@ import {
 } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-describe('MultiplesComponent', () => {
+describe('LogifierComponent', () => {
 	const mockElectronIpcService = jasmine.createSpyObj(['receive', 'send']);
-	let fixture: ComponentFixture<MultiplesComponent>;
-	let component: MultiplesComponent;
+	let fixture: ComponentFixture<LogifierComponent>;
+	let component: LogifierComponent;
 
 	beforeEach(waitForAsync(() => {
 		TestBed.configureTestingModule({
-			declarations: [MultiplesComponent],
+			declarations: [LogifierComponent],
 			imports: [
 				ReactiveFormsModule,
 				TranslateModule,
@@ -39,7 +39,7 @@ describe('MultiplesComponent', () => {
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(MultiplesComponent);
+		fixture = TestBed.createComponent(LogifierComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});
